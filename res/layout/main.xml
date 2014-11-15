@@ -13,7 +13,7 @@
             android:textSize="22pt"
             android:id="@+id/tvResult"
             android:layout_weight="3"
-            android:gravity="center_horizontal" android:background="@color/BacgroundDarkGreen">
+            android:gravity="center_horizontal" android:background="@color/BackgroundDarkGreen">
     </TextView>
     <TableLayout
             android:layout_width="match_parent"
@@ -34,7 +34,6 @@
             </Button>
             <Button
                     android:text="X"
-                    android:textSize="50dip"
                     android:id="@+id/btn2"
                     style="@style/ButtonTheme"
                     >

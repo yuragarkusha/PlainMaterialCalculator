@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
-
-
     <style name="AppTheme" parent="AppTheme.Base">
     </style>
-
     <style name="AppTheme.Base" parent="Theme.AppCompat">
-
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
     <style name="ButtonTheme" >
-        <!--<item name="android:background">@color/blue</item>-->
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">50dip</item>
+        <item name="android:textSize">50sp</item>
         <item name="android:layout_marginRight">-4.7dip</item>
         <item name="android:layout_marginLeft">-4.7dip</item>
         <item name="android:layout_marginBottom">-6dip</item>
