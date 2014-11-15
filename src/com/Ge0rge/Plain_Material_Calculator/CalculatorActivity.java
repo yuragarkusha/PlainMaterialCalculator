@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class CalculatorActivity extends Activity {
@@ -11,12 +12,14 @@ public class CalculatorActivity extends Activity {
      * Called when the activity is first created.
      */
     private TextView calculatorTextView;
+    private ScrollView ctvScrollView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         calculatorTextView = (TextView)findViewById(R.id.tvResult);
+        ctvScrollView = (ScrollView)findViewById(R.id.ScrollView01);
     }
 
 
@@ -57,4 +60,5 @@ public class CalculatorActivity extends Activity {
     public void onZeroButtonClick(View view) {
         calculatorTextView.setText(calculatorTextView.getText() + getString(R.string.Zero));
     }
+
 }
