@@ -12,13 +12,10 @@ public class Calculation {
     public List<String> ListOfCalculations;
     public Stack<Double> calculationStack = new Stack<Double>();
 
-
-
     public void listOfCalculationsAdd (String addSymbol)
     {
         ListOfCalculations.add(addSymbol);
     }
-
 
     public void stackOfCalculationsAdd (double addSymbol)
     {
@@ -44,7 +41,6 @@ public class Calculation {
 
     public int operation(Double a, Double b, String operator)
     {
-
         return 0;
     }
 
@@ -67,4 +63,32 @@ public class Calculation {
         return result ;
     }
 
+
+    public double adding(double a, double b)
+    {
+        double result;
+        result = a + b;
+        return result;
+    }
+
+    public double subtraction(double a, double b)
+    {
+        double result;
+        result = a - b;
+        return result;
+    }
+
+    public double multiplication(double a, double b)
+    {
+        double result;
+        result = a * b;
+        return result;
+    }
+
+    public double division (double a, double b)
+    {
+        double result;
+        result = b / a;
+        return result;
+    }
 }
