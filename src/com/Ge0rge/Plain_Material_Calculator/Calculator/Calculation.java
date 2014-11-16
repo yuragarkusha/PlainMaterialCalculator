@@ -1,5 +1,9 @@
 package com.Ge0rge.Plain_Material_Calculator.Calculator;
 
+import net.sourceforge.jeval.EvaluationException;
+import net.sourceforge.jeval.Evaluator;
+
+import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Stack;
@@ -9,86 +13,30 @@ import java.util.Stack;
  */
 public class Calculation {
 
-    public List<String> ListOfCalculations;
-    public Stack<Double> calculationStack = new Stack<Double>();
+    static ArrayList<String> ListOfCalculations = new ArrayList<String>();
 
-    public void listOfCalculationsAdd (String addSymbol)
+    public static void listOfCalculationsAdd(String addSymbol)
     {
         ListOfCalculations.add(addSymbol);
     }
 
-    public void stackOfCalculationsAdd (double addSymbol)
+    public static double calculation()
     {
-        try
-        {
-            calculationStack.push(addSymbol);
-        }
-        catch (EmptyStackException ignored)
-        {
-        }
-    }
+        Evaluator evaluator = new Evaluator();
 
-    public boolean checkSymbol(String symbol)
-    {
+        String expressionString = "";
+
+        for (String symbol : ListOfCalculations)
+        {
+            expressionString += symbol;
+        }
+
         try {
-            double number = Double.parseDouble(symbol);
-            return true;
+            return Double.parseDouble(evaluator.evaluate(expressionString));
+        } catch (EvaluationException e) {
+            e.printStackTrace();
         }
-        catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-    public int operation(Double a, Double b, String operator)
-    {
         return 0;
     }
 
-    public double calculation()
-    {
-        double result = 0.000;
-        for (int i = 1; i < ListOfCalculations.size(); i++)
-        {
-            if(checkSymbol(ListOfCalculations.get(i))==true || calculationStack.size()<2)
-            {
-                stackOfCalculationsAdd(Integer.parseInt(ListOfCalculations.get(i)));
-            }
-            else
-            {
-              result = operation(calculationStack.pop(),calculationStack.pop(),ListOfCalculations.get(i));
-                calculationStack.push(result);
-            }
-        }
-
-        return result ;
-    }
-
-
-    public double adding(double a, double b)
-    {
-        double result;
-        result = a + b;
-        return result;
-    }
-
-    public double subtraction(double a, double b)
-    {
-        double result;
-        result = a - b;
-        return result;
-    }
-
-    public double multiplication(double a, double b)
-    {
-        double result;
-        result = a * b;
-        return result;
-    }
-
-    public double division (double a, double b)
-    {
-        double result;
-        result = b / a;
-        return result;
-    }
 }

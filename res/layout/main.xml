@@ -22,8 +22,7 @@
                 android:id="@+id/tvResult"
                 android:scrollbars = "vertical"
                 android:gravity="center_horizontal"
-                android:textIsSelectable="true"
-                android:background="@color/BackgroundDarkGreen">
+                android:textIsSelectable="true">
         </TextView>
     </ScrollView>
 
@@ -39,26 +38,30 @@
                 android:layout_weight="1"
                 >
             <Button
-                    android:text="/"
+                    android:text="@string/Division"
                     android:id="@+id/btnDivision"
+                    android:onClick="onBtnDivisionClick"
                     style="@style/ButtonTheme"
                     >
             </Button>
             <Button
-                    android:text="X"
+                    android:text="@string/Multiplication"
                     android:id="@+id/btnMultiplication"
                     style="@style/ButtonTheme"
+                    android:onClick="onBtnMultiplicationClick"
                     >
             </Button>
             <Button
-                    android:text="("
+                    android:text="@string/OpeningParenthesis"
                     android:id="@+id/btnOpeningParenthesis"
+                    android:onClick="onBtnOpeningParenthesisClick"
                     style="@style/ButtonTheme"
                     >
             </Button>
             <Button
-                    android:text=")"
+                    android:text="@string/ClosingParenthesis"
                     android:id="@+id/btnClosingParenthesis"
+                    android:onClick="onBtnClosingParenthesisClick"
                     style="@style/ButtonTheme"
                     >
             </Button>
@@ -91,9 +94,10 @@
                     >
             </Button>
             <Button
-                    android:text="-"
+                    android:text="@string/Subtraction"
                     android:id="@+id/btnSubtract"
                     style="@style/ButtonTheme"
+                    android:onClick="onBtnSubtractionClick"
                     >
             </Button>
         </TableRow>
@@ -125,8 +129,9 @@
                     >
             </Button>
             <Button
-                    android:text="+"
+                    android:text="@string/Add"
                     android:id="@+id/btnAdd"
+                    android:onClick="onBtnAddClick"
                     style="@style/ButtonTheme"
                     >
             </Button>
@@ -172,8 +177,9 @@
                 android:layout_weight="1"
                 >
             <Button
-                    android:text="."
+                    android:text="@string/Dot"
                     android:id="@+id/btnDot"
+                    android:onClick="onBtnDotClick"
                     style="@style/ButtonTheme"
                     >
             </Button>
@@ -191,8 +197,9 @@
                     >
             </Button>
             <Button
-                    android:text="="
+                    android:text="@string/Equals"
                     android:id="@+id/btnEqual"
+                    android:onClick="onEqualsButtonClick"
                     style="@style/ButtonTheme"
                     >
             </Button>

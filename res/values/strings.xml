@@ -11,5 +11,15 @@
     <string name="Eight">8</string>
     <string name="Nine">9</string>
     <string name="Zero">0</string>
+    <string name="Division">/</string>
+    <string name="Equals">=</string>
+    <string name="Multiplication">X</string>
+    <string name="MultiplicationOperation">*</string>
+    <string name="Add">+</string>
+    <string name="Subtraction">-</string>
+    <string name="OpeningParenthesis">(</string>
+    <string name="ClosingParenthesis">)</string>
+    <string name="Dot">.</string>
+
 
 </resources>
