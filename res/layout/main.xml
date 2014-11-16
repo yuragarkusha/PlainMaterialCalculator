@@ -22,7 +22,8 @@
                 android:id="@+id/tvResult"
                 android:scrollbars = "vertical"
                 android:gravity="center_horizontal"
-                android:textIsSelectable="true">
+                android:lines="10"
+                android:editable="true">
         </TextView>
     </ScrollView>
 

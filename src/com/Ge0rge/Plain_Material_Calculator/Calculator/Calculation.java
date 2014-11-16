@@ -13,7 +13,10 @@ import java.util.Stack;
  */
 public class Calculation {
 
-    static ArrayList<String> ListOfCalculations = new ArrayList<String>();
+    public static ArrayList<String> ListOfCalculations = new ArrayList<String>();
+    public static boolean EndComputing = false;
+    public static int OpenParenthesis = 0;
+    public static double  LastResultOfCalculations;
 
     public static void listOfCalculationsAdd(String addSymbol)
     {
