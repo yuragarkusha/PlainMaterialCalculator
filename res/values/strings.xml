@@ -20,6 +20,7 @@
     <string name="OpeningParenthesis">(</string>
     <string name="ClosingParenthesis">)</string>
     <string name="Dot">.</string>
+    <string name="Clean">C</string>
 
 
 </resources>

@@ -219,4 +219,8 @@ public class CalculatorActivity extends Activity {
         Calculation.EndComputing=false;
         Calculation.OpenParenthesis=0;
     }
+
+    public void onBtnCleanClick(View view) {
+        cleaningCalculatorTextView();
+    }
 }
